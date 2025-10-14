@@ -6,8 +6,8 @@ class User {
     this.password = password;
     this.isLoggedIn = false;
     this.profile = {
-      bio: '',
-      age: null
+      bio: "",
+      age: null,
     };
   }
 
@@ -16,24 +16,24 @@ class User {
       this.isLoggedIn = true;
       return `${this.username} logged in successfully`;
     }
-    return 'Invalid password';
+    return "Invalid password";
   }
 
   logout() {
     if (this.isLoggedIn) {
       this.isLoggedIn = false;
-      return 'Logged out successfully';
+      return "Logged out successfully";
     }
-    return 'User is not logged in';
+    return "User is not logged in";
   }
 
   updateProfile(bio, age) {
     if (!this.isLoggedIn) {
-      return 'Must be logged in to update profile';
+      return "Must be logged in to update profile";
     }
     // Using spread operator
     this.profile = { ...this.profile, bio, age };
-    return 'Profile updated';
+    return "Profile updated";
   }
 }
 
@@ -41,7 +41,7 @@ class User {
 class Admin extends User {
   constructor(username, email, password) {
     super(username, email, password);
-    this.role = 'admin';
+    this.role = "admin";
     this.permissions = [];
   }
 

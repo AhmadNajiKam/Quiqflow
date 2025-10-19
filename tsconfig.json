@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",             // Output JS version
+    "module": "commonjs",           // Or "esnext" if using ESM imports
+    "rootDir": "./src",             // Where your TS code lives
+    "outDir": "./dist",             // Where compiled JS will go
+    "strict": true,                 // Enable strict type-checking
+    "esModuleInterop": true,        // Better import compatibility
+    "moduleResolution": "node",     // Standard module resolution
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],          // Compile all .ts files in src
+  "exclude": ["node_modules"]       // Ignore dependencies
+}
+

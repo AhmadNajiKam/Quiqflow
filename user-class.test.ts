@@ -1,7 +1,7 @@
-const { User, Admin } = require("./user-class");
+import { User, Admin } from "./user-class";
 
 describe("User Class", () => {
-  let user;
+  let user: User;
 
   beforeEach(() => {
     user = new User("john", "john@email.com", "pass123");
@@ -52,7 +52,7 @@ describe("User Class", () => {
 });
 
 describe("Admin Class", () => {
-  let admin;
+  let admin: Admin;
 
   beforeEach(() => {
     admin = new Admin("admin1", "admin@email.com", "admin123");
